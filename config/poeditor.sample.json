@@ -1,0 +1,18 @@
+{
+  "apiToken":"REPLACE_WITH_YOUR_API_TOKEN",
+  "projectId":"REPLACE_WITH_YOUR_PROJECT_ID",
+  "importFile":"spec/messages.xmb",
+  "importSyncTerms": 1,
+  "exportDir":"locale",
+  "exportFiles":{
+      "en":"messages.en.xtb",
+      "es":"messages.es.xtb",
+      "ja":"messages.ja.xtb",
+      "ko":"messages.ko.xtb",
+      "pt":"messages.pt.xtb",
+      "ru":"messages.ru.xtb",
+      "tr":"messages.tr.xtb",
+      "vi":"messages.vi.xtb",
+      "zh-CN":"messages.zh.xtb"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "poeditor-connector",
+  "version": "1.0.0",
+  "description": "Plugin For Posting XMB and Retreiving XTB messages from poeditor.com",
+  "main": "app/index.js",
+  "bin": {
+    "poeditor": "app/bin.js"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/jasmine-node spec"
+  },
+  "author": "Jon Marston <jon@marstonstudio.com>",
+  "license": "MIT",
+  "repository": "https://github.com/marstonstudio/poeditor-connector.git",
+  "dependencies": {
+    "argv": "0.0.2",
+    "jasmine-node": "1.14.5",
+    "request": "2.79.0",
+    "require-promise": "1.0.1",
+    "rimraf": "2.5.4"
+  }
+}

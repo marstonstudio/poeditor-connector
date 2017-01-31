@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE messagebundle [
+<!ELEMENT messagebundle (msg)*>
+<!ATTLIST messagebundle class CDATA #IMPLIED>
+
+<!ELEMENT msg (#PCDATA|ph|source)*>
+<!ATTLIST msg id CDATA #IMPLIED>
+<!ATTLIST msg seq CDATA #IMPLIED>
+<!ATTLIST msg name CDATA #IMPLIED>
+<!ATTLIST msg desc CDATA #IMPLIED>
+<!ATTLIST msg meaning CDATA #IMPLIED>
+<!ATTLIST msg obsolete (obsolete) #IMPLIED>
+<!ATTLIST msg xml:space (default|preserve) "default">
+<!ATTLIST msg is_hidden CDATA #IMPLIED>
+
+<!ELEMENT source (#PCDATA)>
+
+<!ELEMENT ph (#PCDATA|ex)*>
+<!ATTLIST ph name CDATA #REQUIRED>
+
+<!ELEMENT ex (#PCDATA)>
+]>
+<messagebundle>
+  <msg id="e3f01f441c836ebc146d0fa2557ae4bb6c78f12a">To use this feature please upgrade to a later Android release. <ph name="START_LINK"><ex>&lt;a&gt;</ex></ph>Contact support.<ph name="CLOSE_LINK"><ex>&lt;/a&gt;</ex></ph></msg>
+  <msg id="94516fa213706c67ce5a5b5765681d7fb032033a">Loading...</msg>
+  <msg id="34b9096afa945c1330f199079fb4964ad1344552" desc="Quiz these [N] Words">Quiz these <ph name="INTERPOLATION"/> words</msg>
+  <msg id="69c5b838e7750df102186d9e991e708840de755e">You have completed this Quiz</msg>
+  <msg id="9e8498547a34370c4f279d61beac7ad34f69ffd9">Start Quiz</msg>
+  <msg id="e4612f434e64d4524459a591d3c088fd2e9fd8c6">Continue Quiz</msg>
+  <msg id="8c3a2a74bcbe7d4e2f0951be4892936c396ac5c4">Select the matching definition</msg>
+  <msg id="33b5a7bbf07283a9359980cea70d57b38a2bfc2e" desc="question X of Y">Question <ph name="INTERPOLATION"/> of <ph name="INTERPOLATION_1"/></msg>
+  <msg id="06896cdfc51890395fb1672ff94df6e8ab068f34" desc="Quiz has been completed message">Complete!</msg>
+  <msg id="157297e99dcd861676fd94b2ca799ad462371eb3" desc="You got X of Y words correct">You got <ph name="INTERPOLATION"/> of <ph name="INTERPOLATION_1"/> words correct.</msg>
+</messagebundle>
