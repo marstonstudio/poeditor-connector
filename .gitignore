@@ -1,2 +1,4 @@
 .idea/
 config/poeditor.json
+locale/
+node_modules/

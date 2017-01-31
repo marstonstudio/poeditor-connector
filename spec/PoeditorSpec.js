@@ -2,11 +2,10 @@ var connector = require("../app/index");
 
 describe("Poeditor REST", function() {
 
-    //beforeEach(function() {
-    //   connector.init();
-    //});
+    beforeEach(function() {
+       connector.init("./config/poeditor.json");
+    });
 
-    /*
     it("lists languages", function(done) {
         connector.listProjectLanguages()
             .then(function(list){
@@ -20,9 +19,7 @@ describe("Poeditor REST", function() {
                 done();
             });
     });
-    */
 
-    /*
     it("imports data", function(done) {
         connector.importMessages()
             .then(function(){
@@ -35,14 +32,12 @@ describe("Poeditor REST", function() {
                 done();
             });
     });
-    */
 
-    /*
-    it("exports language zh", function(done) {
-        connector.exportProjectLanguage("zh-CN")
+    it("exports language tl", function(done) {
+        connector.exportProjectLanguage("tl")
             .then(function(file){
                 console.log(file);
-                expect(file).toContain("zh");
+                expect(file).toContain("tl");
                 done();
             })
             .catch(function(exception) {
@@ -51,13 +46,9 @@ describe("Poeditor REST", function() {
                 done();
             });
     });
-    */
 
-    /*
     it("exports all languages", function(done) {
-        connector.exportAllLanguages();
-        done();
-
+        connector.exportAllLanguages()
             .then(function(){
                 console.log("done");
                 expect(true).toBe(true);
@@ -70,10 +61,5 @@ describe("Poeditor REST", function() {
             });
 
     });
-     */
-
-    it("executes", function() {
-        connector.execute();
-    })
 
 });

@@ -33,7 +33,7 @@ module.exports = {
     init: function(configFilePath) {
 
         if (configFilePath == undefined) {
-            configFilePath = "./config/poeditor.sample.json";
+            throw Error("must initialize with a configFilePath");
         }
 
         var confString = fs.readFileSync(configFilePath, "utf8");

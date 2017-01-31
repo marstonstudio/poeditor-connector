@@ -8,7 +8,7 @@ var args = argv.option({
     short: 'c',
     type: 'string',
     description: 'Defines the config file location',
-    example: "poeditor-connector --config=config/poeditor.sample.json"
+    example: "poeditor-connector --config=config/poeditor.json"
 }).run();
 
 connector.init(args.options.config);
