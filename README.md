@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/poeditor-connector.svg)](https://badge.fury.io/js/poeditor-connector)
+
 poeditor-connector
 ===========
 
@@ -5,7 +7,7 @@ Connect javascript applications with [poeditor.com](https://poeditor.com) for ea
 
 Can be used to upload XMB message files generated from Angular2 i18n process and download translated XTB files suitable for bundling.
 
-Install with npm.
+Install with npm through published version on [npmjs.org](https://www.npmjs.com/package/poeditor-connector)
 
 ```sh
 npm install poeditor-connector --save
