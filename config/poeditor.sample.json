@@ -2,7 +2,11 @@
   "apiToken":"REPLACE_WITH_YOUR_API_TOKEN",
   "projectId":"REPLACE_WITH_YOUR_PROJECT_ID",
   "importFile":"spec/messages.xmb",
+  "importUpdating": "terms_definitions",
+  "importLanguage": "en",
+  "importOverwrite": 0,
   "importSyncTerms": 1,
+  "importFuzzyTrigger": 0,
   "exportDir":"locale",
   "exportFiles":{
       "en":"messages.en.xtb",
