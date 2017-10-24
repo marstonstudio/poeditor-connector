@@ -4,6 +4,7 @@
   "importFile":"spec/messages.xmb",
   "importSyncTerms": 1,
   "exportDir":"locale",
+  "importTags": "all",
   "exportFiles":{
       "en":"messages.en.xtb",
       "es":"messages.es.xtb",
@@ -14,5 +15,6 @@
       "tr":"messages.tr.xtb",
       "vi":"messages.vi.xtb",
       "zh-CN":"messages.zh.xtb"
-  }
+  },
+  "exportTags": "all"
 }
