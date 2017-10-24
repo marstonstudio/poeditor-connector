@@ -13,9 +13,10 @@ var importUpdating;
 var importLanguage;
 var importOverwrite;
 var importSyncTerms;
-var importFuzzyTrigger;
+var importTags;
 var exportDir;
 var exportFiles;
+var exportTags;
 
 // https://poeditor.com/api_reference/
 
@@ -86,6 +87,11 @@ module.exports = {
             importFuzzyTrigger = 0;
         }
 
+        importTags = confObj.importTags;
+        if (importTags == undefined) {
+            importTags = "all";
+        }
+
         exportDir = confObj.exportDir;
         if (exportDir == undefined) {
             console.error("exportDir");
@@ -98,6 +104,11 @@ module.exports = {
         }
 
         exportFiles = confObj.exportFiles;
+
+        exportTags = confObj.exportTags;
+        if (exportTags == undefined) {
+            exportTags = "all";
+        }
     },
 
     importMessages: function() {
@@ -115,8 +126,10 @@ module.exports = {
                         language: importLanguage,
                         overwrite: importOverwrite,
                         sync_terms: importSyncTerms,
+                        file: fs.createReadStream(importFile),
                         fuzzy_trigger: importFuzzyTrigger,
-                        file: fs.createReadStream(importFile)
+                        file: fs.createReadStream(importFile),
+                        tags: importTags
                     }
                 },
                 function(error, response, body) {
@@ -196,7 +209,8 @@ module.exports = {
                         action: "export",
                         id: poeditorProjectId,
                         language: lang,
-                        type: "xtb"
+                        type: "xtb",
+                        tags: exportTags
                     }
                 },
                 function(error, response, body) {

@@ -8,6 +8,8 @@
   "importSyncTerms": 1,
   "importFuzzyTrigger": 0,
   "exportDir":"locale",
+  "importTags": "all",
+  "exportTags": "all",
   "exportFiles":{
       "en":"messages.en.xtb",
       "es":"messages.es.xtb",
