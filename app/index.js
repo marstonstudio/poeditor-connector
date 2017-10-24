@@ -39,7 +39,7 @@ module.exports = {
         var confString = fs.readFileSync(configFilePath, "utf8");
         var confObj = JSON.parse(confString);
 
-        poeditorApiToken = confObj.apiToken;
+        poeditorApiToken = process.env.POEDITOR_API_TOKEN || confObj.apiToken;
         if (poeditorApiToken == undefined) {
             console.error("poeditorApiToken");
             throw Error(configFilePath + " must contain an api_token value entry 'apiToken'");
