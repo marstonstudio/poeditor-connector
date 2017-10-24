@@ -94,14 +94,21 @@ module.exports = {
                     }
                 },
                 function(error, response, body) {
+                    if (error) {
+                        reject(error);
+                        return;
+                    }
+
                     try {
                         var result = parseResponse(error, response, body);
                     } catch (e) {
                         reject(e);
+                        return;
                     }
 
-                    if (!result.details) {
+                    if (result && !result.details) {
                         reject("missing result details");
+                        return;
                     }
 
                     console.log("uploaded terms. parsed:" + result.details.terms.parsed + ", added:" + result.details.terms.parsed + ", deleted:" + result.details.terms.deleted);
