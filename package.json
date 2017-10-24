@@ -1,6 +1,6 @@
 {
   "name": "poeditor-connector",
-  "version": "0.6.0",
+  "version": "0.8.0",
   "description": "Plugin For Posting XMB and Retreiving XTB messages from poeditor.com",
   "main": "app/index.js",
   "bin": {
@@ -15,8 +15,8 @@
   "dependencies": {
     "argv": "0.0.2",
     "jasmine-node": "1.14.5",
-    "request": "2.79.0",
+    "request": "2.83.0",
     "require-promise": "1.0.1",
-    "rimraf": "2.5.4"
+    "rimraf": "2.6.2"
   }
 }
