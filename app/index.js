@@ -9,6 +9,9 @@ var poeditorApiToken;
 var poeditorProjectId;
 
 var importFile;
+var importUpdating;
+var importLanguage;
+var importOverwrite;
 var importSyncTerms;
 var importTags;
 var exportDir;
@@ -41,7 +44,7 @@ module.exports = {
         var confString = fs.readFileSync(configFilePath, "utf8");
         var confObj = JSON.parse(confString);
 
-        poeditorApiToken = confObj.apiToken;
+        poeditorApiToken = process.env.POEDITOR_API_TOKEN || confObj.apiToken;
         if (poeditorApiToken == undefined) {
             console.error("poeditorApiToken");
             throw Error(configFilePath + " must contain an api_token value entry 'apiToken'");
@@ -59,9 +62,29 @@ module.exports = {
             throw Error(configFilePath + " must contain an existing import file entry 'importFile'");
         }
 
+        importUpdating = confObj.importUpdating;
+        if (importUpdating == undefined) {
+            importUpdating = "terms_definitions";
+        }
+
+        importLanguage = confObj.importLanguage;
+        if (importLanguage == undefined) {
+            importLanguage = "en";
+        }
+
+        importOverwrite = confObj.importOverwrite;
+        if (importOverwrite == undefined) {
+            importOverwrite = 0;
+        }
+
         importSyncTerms = confObj.importSyncTerms;
         if (importSyncTerms == undefined) {
             importSyncTerms = 0;
+        }
+
+        importFuzzyTrigger = confObj.importFuzzyTrigger;
+        if (importFuzzyTrigger == undefined) {
+            importFuzzyTrigger = 0;
         }
 
         importTags = confObj.importTags;
@@ -99,9 +122,12 @@ module.exports = {
                         api_token: poeditorApiToken,
                         action: "upload",
                         id: poeditorProjectId,
-                        updating: "terms_definitions",
-                        language: "en",
+                        updating: importUpdating,
+                        language: importLanguage,
+                        overwrite: importOverwrite,
                         sync_terms: importSyncTerms,
+                        file: fs.createReadStream(importFile),
+                        fuzzy_trigger: importFuzzyTrigger,
                         file: fs.createReadStream(importFile),
                         tags: importTags
                     }
