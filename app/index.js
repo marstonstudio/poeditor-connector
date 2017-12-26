@@ -17,6 +17,7 @@ var importTags;
 var exportDir;
 var exportFiles;
 var exportTags;
+var exportType;
 
 // https://poeditor.com/api_reference/
 
@@ -108,6 +109,11 @@ module.exports = {
         exportTags = confObj.exportTags;
         if (exportTags == undefined) {
             exportTags = "all";
+        }
+        
+        exportType = confObj.exportType;
+        if (exportType == undefined) {
+            exportType = "xtb";
         }
     },
 
@@ -209,7 +215,7 @@ module.exports = {
                         action: "export",
                         id: poeditorProjectId,
                         language: lang,
-                        type: "xtb",
+                        type: exportType,
                         tags: exportTags
                     }
                 },
