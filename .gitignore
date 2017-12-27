@@ -1,4 +1,5 @@
 .idea/
 config/poeditor.json
+package-lock.json
 locale/
 node_modules/
