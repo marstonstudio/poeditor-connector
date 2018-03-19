@@ -16,6 +16,7 @@ var importSyncTerms;
 var importTags;
 var exportDir;
 var exportFiles;
+var exportFilters;
 var exportTags;
 var exportType;
 
@@ -105,6 +106,11 @@ module.exports = {
         }
 
         exportFiles = confObj.exportFiles;
+
+        exportFilters = confObj.exportFilters;
+        if (exportFilters == undefined) {
+            exportFilters = "all";
+        }
 
         exportTags = confObj.exportTags;
         if (exportTags == undefined) {
@@ -216,6 +222,7 @@ module.exports = {
                         id: poeditorProjectId,
                         language: lang,
                         type: exportType,
+                        filters: exportFilters,
                         tags: exportTags
                     }
                 },
