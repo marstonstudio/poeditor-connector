@@ -7,10 +7,10 @@
   "importOverwrite": 0,
   "importSyncTerms": 1,
   "importFuzzyTrigger": 0,
-  "exportDir":"locale",
+  "exportDir": "locale",
   "importTags": "all",
   "exportTags": "all",
-  "exportFiles":{
+  "exportFiles": {
       "en":"messages.en.xtb",
       "es":"messages.es.xtb",
       "ja":"messages.ja.xtb",
@@ -20,5 +20,6 @@
       "tr":"messages.tr.xtb",
       "vi":"messages.vi.xtb",
       "zh-CN":"messages.zh.xtb"
-  }
+  },
+  "exportFilters": "all"
 }
