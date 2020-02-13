@@ -1,6 +1,6 @@
 {
   "name": "poeditor-connector",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Plugin For Posting XMB and Retreiving XTB messages from poeditor.com",
   "main": "app/index.js",
   "bin": {
