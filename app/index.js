@@ -3,7 +3,7 @@ var fs = require('fs');
 var Promise = require("require-promise");
 var rimraf = require("rimraf");
 
-var poeditorBaseUrl = "http://poeditor.com/api/";
+var poeditorBaseUrl = "https://poeditor.com/api/";
 
 var poeditorApiToken;
 var poeditorProjectId;
