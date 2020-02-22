@@ -75,4 +75,4 @@ npm run i18n
 
 ## License
 
-[MIT](LICENSE). Copyright (c) 2017 Jon Marston.
+[MIT](LICENSE). Copyright (c) 2020 Jon Marston.
