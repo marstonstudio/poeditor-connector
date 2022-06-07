@@ -2,9 +2,15 @@
   "apiToken":"REPLACE_WITH_YOUR_API_TOKEN",
   "projectId":"REPLACE_WITH_YOUR_PROJECT_ID",
   "importFile":"spec/messages.xmb",
+  "importUpdating": "terms_definitions",
+  "importLanguage": "en",
+  "importOverwrite": 0,
   "importSyncTerms": 1,
-  "exportDir":"locale",
-  "exportFiles":{
+  "importFuzzyTrigger": 0,
+  "exportDir": "locale",
+  "importTags": "all",
+  "exportTags": "all",
+  "exportFiles": {
       "en":"messages.en.xtb",
       "es":"messages.es.xtb",
       "ja":"messages.ja.xtb",
@@ -14,5 +20,6 @@
       "tr":"messages.tr.xtb",
       "vi":"messages.vi.xtb",
       "zh-CN":"messages.zh.xtb"
-  }
+  },
+  "exportFilters": "all"
 }
