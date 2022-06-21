@@ -230,11 +230,16 @@ module.exports = {
                     try {
                         var result = parseResponse(error, response, body);
                     } catch (e) {
-                        reject(e);
+                        return reject(e);
+                    }
+
+                    if (!result) {
+                        console.error("empty result was parsed", body);
+                        return reject("empty result")
                     }
 
                     if (!result.item) {
-                        reject("missing 'item' in " + body);
+                        return reject("missing 'item' in " + body);
                     }
 
                     var url = decodeURI(result.item);
